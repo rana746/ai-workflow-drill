@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <form id="signup-form" class="signup-form" novalidate>
+      <header class="form-header">
+        <h1>Create your account</h1>
+        <p>Join us in just a few steps.</p>
+      </header>
+
+      <div class="field">
+        <label for="fullName">Full name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          autocomplete="name"
+          placeholder="Enter your full name"
+          aria-describedby="fullName-error"
+          aria-invalid="false"
+          required
+        >
+        <span class="error-message" id="fullName-error" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          placeholder="Enter your email"
+          aria-describedby="email-error"
+          aria-invalid="false"
+          required
+        >
+        <span class="error-message" id="email-error" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          autocomplete="new-password"
+          placeholder="Create a password"
+          aria-describedby="password-error"
+          aria-invalid="false"
+          required
+        >
+        <span class="error-message" id="password-error" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="confirmPassword">Confirm password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          autocomplete="new-password"
+          placeholder="Re-enter your password"
+          aria-describedby="confirmPassword-error"
+          aria-invalid="false"
+          required
+        >
+        <span class="error-message" id="confirmPassword-error" role="alert"></span>
+      </div>
+
+      <div class="field field--checkbox">
+        <label class="checkbox-label">
+          <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            aria-describedby="terms-error"
+            aria-invalid="false"
+            required
+          >
+          <span>I agree to the <a href="#">Terms of Service</a></span>
+        </label>
+        <span class="error-message" id="terms-error" role="alert"></span>
+      </div>
+
+      <button type="submit" class="submit-btn">Sign up</button>
+
+      <p class="form-footer">
+        Already have an account? <a href="#">Log in</a>
+      </p>
+    </form>
+
+    <div id="success-message" class="success-message" hidden>
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <h2>Account created!</h2>
+      <p>Welcome aboard. You can now log in with your credentials.</p>
+    </div>
+  </main>
+
+  <script src="validation.js"></script>
+</body>
+</html>
